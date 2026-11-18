@@ -1,7 +1,9 @@
 import express from "express";
+import helmet from "helmet";
 import { MongoClient } from "mongodb";
 
 const app = express();
+app.use(helmet());
 app.use(express.json());
 const PORT = 3000;
 
